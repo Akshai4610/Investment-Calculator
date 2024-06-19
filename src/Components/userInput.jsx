@@ -11,6 +11,7 @@ export default function UserInput({userInput,inputChange}) {
               inputChange('initialInvestment', event.target.value)
             }
             defaultValue={userInput.initialInvestment}
+            min={0}
             required
           />
         </p>
@@ -22,6 +23,7 @@ export default function UserInput({userInput,inputChange}) {
               inputChange('annualInvestment', event.target.value)
             }
             defaultValue={userInput.annualInvestment}
+            min={0}
             required
           />
         </p>
@@ -33,6 +35,7 @@ export default function UserInput({userInput,inputChange}) {
               inputChange('expectedReturn', event.target.value)
             }
             defaultValue={userInput.expectedReturn}
+            min={1}
             required
           />
         </p>
@@ -42,6 +45,7 @@ export default function UserInput({userInput,inputChange}) {
             type="number"
             onChange={(event) => inputChange('duration', event.target.value)}
             defaultValue={userInput.duration}
+            min={-2}
             required
           />
         </p>

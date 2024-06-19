@@ -71,6 +71,7 @@ body {
   table-layout: fixed;
   border-spacing: 1rem;
   text-align: right;
+  position: relative;
 }
 
 #result thead {

@@ -11,6 +11,8 @@ export default function App() {
     duration: 10,
   });
 
+    const validation=userInput.duration>=1;
+
   function inputChange(inputValue, value) {
     setUserInput((prev) => {
       return {
@@ -24,7 +26,8 @@ export default function App() {
     <main>
       <Header />
       <UserInput userInput={userInput} inputChange={inputChange}/>
-      <Result userInput={userInput}/>
+      {!validation && <p className="center">Valid input required, Please exclude the -ve value</p>}
+      {validation && <Result userInput={userInput}/>}
     </main>
   );
 }
